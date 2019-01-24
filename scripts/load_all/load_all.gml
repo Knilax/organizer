@@ -31,6 +31,7 @@ for(var i = 0; i < array_length_1d(_arr); i++)
 		var _split_arr = string_split(_val_arr[j], ":");
 		var _var_name = _split_arr[0];
 		var _var_value = _split_arr[1];
+		if(string(real(_var_value)) == _var_value) _var_value = real(_var_value);
 		// Set variable depending on object name / variable type
 		switch(_name)
 		{
@@ -38,13 +39,14 @@ for(var i = 0; i < array_length_1d(_arr); i++)
 			case "camera":
 				switch(_var_name)
 				{
-					case "x": global._cam_x = real(_var_value); break;
-					case "y": global._cam_y = real(_var_value); break;
+					case "zoom": global.cam_zoom = _var_value; break;
+					case "x": global._cam_x = _var_value; break;
+					case "y": global._cam_y = _var_value; break;
 				}
 				break;
 			// Object
 			default:
-				with(_inst) variable_instance_set(id, _var_name, real(_var_value));
+				with(_inst) variable_instance_set(id, _var_name, _var_value);
 				break;
 		}
 	}

@@ -4,7 +4,7 @@
 var _str = "";
 
 // Camera
-_str += "camera{x:" + string(global._cam_x) + ",y:" + string(global._cam_y) + "},";
+_str += "camera{zoom:" + string(global.cam_zoom) +",x:" + string(global._cam_x) + ",y:" + string(global._cam_y) + "},";
 
 // Nodes
 with(Node)
@@ -13,7 +13,8 @@ with(Node)
 	_str += "x:"		+ string(x)			+ ",";
 	_str += "y:"		+ string(y)			+ ",";
 	_str += "width:"	+ string(width)		+ ",";
-	_str += "height:"	+ string(height);
+	_str += "height:"	+ string(height)	+ ",";
+	_str += "body:"		+ string(body);
 	_str += "},";
 }
 
