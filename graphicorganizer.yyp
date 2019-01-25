@@ -194,7 +194,7 @@
             "Key": "2d84584b-070b-4b6b-bae5-4b7dda907eb8",
             "Value": {
                 "id": "dc0ae224-5997-42a8-a1ae-5158c519835e",
-                "resourcePath": "scripts\\load_all\\load_all.yy",
+                "resourcePath": "scripts\\load_data\\load_data.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -220,6 +220,14 @@
                 "id": "5bf5207a-41d0-4439-9cb4-b7bcc9a05436",
                 "resourcePath": "views\\3401d79b-4c87-4b30-8c8c-77c875760036.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "363c9f2d-7c3a-4f76-a8ef-1ad8ec2c7364",
+            "Value": {
+                "id": "e0e1edd7-da96-4113-b846-c5a5d760f158",
+                "resourcePath": "extensions\\nsfs\\nsfs.yy",
+                "resourceType": "GMExtension"
             }
         },
         {
@@ -548,14 +556,6 @@
                 "id": "2e739faa-7b26-4514-b0ec-bb828ad52863",
                 "resourcePath": "views\\dc995d89-9dd0-4a30-96fd-057a4d2b4f4e.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "e1e14b9f-601e-4523-ba0f-ebe537f655d0",
-            "Value": {
-                "id": "bf34902f-26bf-4341-b687-1e49f420436f",
-                "resourcePath": "notes\\TO DO LIST.yy",
-                "resourceType": "GMNotes"
             }
         },
         {

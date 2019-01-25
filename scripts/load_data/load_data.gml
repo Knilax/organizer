@@ -5,10 +5,6 @@
 
 var _str = argument[0];
 
-// Delete existing nodes
-with(NodeBubble) instance_destroy();
-with(Node) instance_destroy();
-
 // Get array of variables
 var _arr = load_get_variables(_str);
 
@@ -32,8 +28,8 @@ for(var i = 0; i < array_length_1d(_arr); i++)
 		var _var_name = _split_arr[0];
 		var _var_value = _split_arr[1];
 		// Convert to array if applicable
-		if(string_count(",", _var_value) >= 1)
-			_var_value = array("["+_var_value+"]");
+		if(string_char_at(_var_value, 1) == "[")
+			_var_value = array(_var_value);
 		// Convert to real if applicable
 		else if(string(real(_var_value)) == _var_value) _var_value = real(_var_value);
 		// Set variable depending on object name / variable type

@@ -37,7 +37,14 @@ with(Node)
 // Cut off last comma
 _str = string_copy(_str, 1, string_length(_str)-1);
 
-// Display
-show_message("Copied to clipboard!");
-//clipboard_set_text(_str);
-clipboard_set_text(base64_encode(_str));
+// Get directory of file
+var _dir = get_save_filename("*.organizer", "")+".organizer";
+
+// Open file
+var _file = file_text_open_write_ns(_dir, -1);
+
+// Write file
+file_text_write_line_ns(_file, _str);
+
+// Close file
+file_text_close_ns(_file);

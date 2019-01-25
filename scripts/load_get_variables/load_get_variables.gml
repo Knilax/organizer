@@ -24,10 +24,16 @@ for(var c = 1; c <= string_length(_str); c++)
 	
 	// Start of array
 	if(_char == "[")
+	{
+		_var_pair += _char;
 		_making_string = true;
+	}
 	// End of array
 	else if(_char == "]")
+	{
+		_var_pair += _char;
 		_making_string = false;
+	}
 	// Var finding
 	else if(_var_finding)
 	{

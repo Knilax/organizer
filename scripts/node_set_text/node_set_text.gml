@@ -16,7 +16,7 @@ with(argument[0])
 {
 	// Set text
 	body = _body;
-	
+
 	// Set header
 	if(!is_undefined(_header)) header = _header;
 	
