@@ -50,38 +50,65 @@ var _right = keyboard_check_pressed(vk_right);
 var _up = keyboard_check_pressed(vk_up);
 var _left = keyboard_check_pressed(vk_left);
 var _down = keyboard_check_pressed(vk_down);
-if(_right ^^ _up ^^ _left ^^ _down)
-{
-	creator.insert_pos = clamp(creator.insert_pos + _right - _left, 0, string_length(creator.body));
-	
-	if(_up ^^ _down)
-		with(creator)
+if((_right ^^ _left) || (_up ^^ _down))
+	with(creator)
+	{
+		// Header
+		if(typing_header)
 		{
-			var _sign = (_up) ? -1 : 1;
-			insert_pos += _sign*string_length(string_get_line(body, string_lines_from_index(body, insert_pos+_up)));
-			insert_pos = clamp(insert_pos, 0, string_length(body));
+			insert_pos = move_cursor(header, insert_pos, _right - _left);
+			if(_up) insert_pos = move_cursor_up(header, insert_pos);
+			else if(_down)
+			{
+				if(insert_pos == string_length(header))
+				{
+					typing_header = false;
+					insert_pos = 0;
+				}
+				else insert_pos = move_cursor_down(header, insert_pos);
+			}
 		}
-}
+		// Body
+		else
+		{
+			insert_pos = move_cursor(body, insert_pos, _right - _left);
+			if(_up)
+			{
+				if(insert_pos == 0)
+				{
+					typing_header = true;
+					insert_pos = string_length(header);
+				}
+				else insert_pos = move_cursor_up(body, insert_pos);
+			}
+			else if(_down) insert_pos = move_cursor_down(body, insert_pos);
+		}
+	}
 
 // Typing
 if(keyboard_check_pressed(vk_anykey))
 {
-	
 	if(keyboard_check_pressed(vk_backspace))
 	{
-		creator.body = string_delete(creator.body, creator.insert_pos, 1);
+		if(creator.typing_header)
+			creator.header = string_delete(creator.header, creator.insert_pos, 1);
+		else creator.body = string_delete(creator.body, creator.insert_pos, 1);
 		creator.insert_pos = max(creator.insert_pos-1, 0);
 	}
 	else if(keyboard_check_pressed(vk_enter))
 	{
 		creator.insert_pos += 1;
-		creator.body = string_insert("\n", creator.body, creator.insert_pos);
+		if(creator.typing_header)
+			creator.header = string_insert("\n", creator.header, creator.insert_pos);
+		else creator.body = string_insert("\n", creator.body, creator.insert_pos);
 	}
 	else
 	{
 		var _chars = keyboard_string;
 		creator.insert_pos += string_length(_chars);
-		creator.body = string_insert(_chars, creator.body, creator.insert_pos);
+		if(creator.typing_header)
+			creator.header = string_insert(_chars, creator.header, creator.insert_pos);
+		else creator.body = string_insert(_chars, creator.body, creator.insert_pos);
 	}
 	
 	// Typing pipe is enabled

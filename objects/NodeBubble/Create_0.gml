@@ -2,6 +2,9 @@
 // Creator
 creator = noone;
 
+// Set cursor position to end of body
+alarm[2] = 1;
+
 // Size
 height = 75;
 width = 160;

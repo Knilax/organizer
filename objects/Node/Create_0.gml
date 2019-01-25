@@ -21,6 +21,7 @@ linked = [];
 double_click_time = 0;
 
 // Text
+typing_header = false;
 header = "";
 body = "";
 body_align = fa_left;
