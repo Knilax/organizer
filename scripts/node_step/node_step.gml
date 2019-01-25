@@ -11,19 +11,7 @@ with(argument[0])
 		
 		// Bubble
 		if(mouse_check_button_pressed(mb_right) && hovering_over_node(id))
-		{
-			global.node_interacted = true;
-			global.last_interacted = id;
-			index = node_highest_index()+1;
-			typing = true;
-			with(instance_create(0, 0, NodeBubble, DEP_BUBBLE))
-			{
-				creator = other;
-				x = nodebubble_desired_x(id);
-				y = nodebubble_desired_y(id) - 15;
-				arrow_x = x + width/2;
-			}
-		}
+			node_open_bubble(id);
 		
 		// Linking
 		if(double_click_time > 0 && mouse_check_button_pressed(mb_left) && hovering_over_node(id))
@@ -38,7 +26,7 @@ with(argument[0])
 				if(instance_exists(global.link) && global.link != id)
 				{
 					with(global.link)
-						linked = array_add_1d(linked, other);
+						linked = array_add_1d(linked, other.node_id);
 					global.link = noone;
 				}
 				

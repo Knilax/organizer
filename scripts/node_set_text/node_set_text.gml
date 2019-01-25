@@ -11,6 +11,7 @@ var _header = undefined;
 if(argument_count == 3)
 	_header = argument[2];
 
+// Edit node
 with(argument[0])
 {
 	// Set text

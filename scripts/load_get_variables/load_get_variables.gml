@@ -10,6 +10,8 @@ var _var_pair = "";
 var _naming = true;
 var _var_finding = false;
 var _current_map = -1;
+var _making_string = false;
+var _ignore_quote = false;
 
 // Hold data
 var _arr = [];
@@ -20,19 +22,39 @@ for(var c = 1; c <= string_length(_str); c++)
 {
 	var _char = string_char_at(_str, c);
 	
+	// Start of array
+	if(_char == "[")
+		_making_string = true;
+	// End of array
+	else if(_char == "]")
+		_making_string = false;
 	// Var finding
-	if(_var_finding)
+	else if(_var_finding)
 	{
+		// Ignore next character
+		if(_char == "\\")
+			_ignore_quote = true;
+		// Toggle string finding
+		else if(_char == "\"" && !_ignore_quote)
+			_making_string = !_making_string;
 		// New pair / stop finding
-		if(_char == "," || _char == "}")
+		else if(_char == "," && !_making_string || _char == "}")
 		{
 			_current_map[?"values"] = array_add_1d(_current_map[?"values"], _var_pair);
 			_var_pair = "";
 			// Stop finding vars
-			if(_char == "}") _var_finding = false;
+			if(_char == "}")
+			{
+				_making_string = false;
+				_var_finding = false;
+			}
 		}
 		// Add to pair
-		else _var_pair += _char;
+		else
+		{
+			_ignore_quote = false;
+			_var_pair += _char;
+		}
 	}
 	// Stop adding to name
 	else if(_char == "{")

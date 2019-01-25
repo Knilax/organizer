@@ -4,6 +4,7 @@ visible = false;
 
 // Index of node
 index = node_highest_index()+1;
+node_id = global._node_id++;
 
 // Size of node
 width = 125;
@@ -25,7 +26,7 @@ body = "";
 body_align = fa_left;
 text_margin_w = 8;
 text_margin_h = 8;
-node_set_text(id, "Sample text.", "");
+node_set_text(id, "", "");
 
 // Typing
 typing = false;

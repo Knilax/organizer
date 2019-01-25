@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "280f3d6c-11cb-4fbf-9f7c-a080d007c0c0",
+            "Value": {
+                "id": "ec1acae3-0b91-48d8-a268-aa2d7cc3d8bf",
+                "resourcePath": "scripts\\array\\array.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "28bf4ed8-c954-42b5-9c03-8aab72bfac0a",
             "Value": {
                 "id": "1e189dab-2565-4bf0-84d5-979c9e4161b3",
@@ -289,7 +297,7 @@
         {
             "Key": "51faeea9-b04e-46a0-b535-bddbda2b0a0c",
             "Value": {
-                "id": "463b86cb-ddc2-4361-92b2-64e7b147c53f",
+                "id": "e801d5ec-1568-40d2-8e23-3ccdfdf9d408",
                 "resourcePath": "objects\\Tutorial\\Tutorial.yy",
                 "resourceType": "GMObject"
             }
@@ -399,6 +407,14 @@
             }
         },
         {
+            "Key": "a3a0cd54-c061-48be-acd9-dd40d028edf5",
+            "Value": {
+                "id": "b8a23a91-868b-4678-8215-5bbc38d7b4d5",
+                "resourcePath": "scripts\\node_instance_from_id\\node_instance_from_id.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "935e44b4-fe5a-447a-a570-757ddb2d80d1",
@@ -435,6 +451,14 @@
             "Value": {
                 "id": "27ca3301-c59c-431e-9499-5129c47172a0",
                 "resourcePath": "scripts\\node_draw\\node_draw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b8be25cf-704c-4c89-9f49-7c6d12eb3fc7",
+            "Value": {
+                "id": "9e3dc1d6-e672-4ed2-a00c-d2c4d737e5d7",
+                "resourcePath": "scripts\\node_open_bubble\\node_open_bubble.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -495,6 +519,14 @@
             }
         },
         {
+            "Key": "e1e14b9f-601e-4523-ba0f-ebe537f655d0",
+            "Value": {
+                "id": "bf34902f-26bf-4341-b687-1e49f420436f",
+                "resourcePath": "notes\\TO DO LIST.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "e5d9cde6-f6ae-4a47-b44c-d2ae90f05239",
             "Value": {
                 "id": "c583dbc7-98fa-4358-835f-136daeae7d20",
@@ -547,6 +579,8 @@
         "6fb44fbf-1208-4a07-b923-ed545235ec21",
         "4017282b-53d1-409d-aa00-6ca3a8886084",
         "e5e71256-b71d-4990-ba33-4d88e9bd0180",
+        "a3a0cd54-c061-48be-acd9-dd40d028edf5",
+        "b8be25cf-704c-4c89-9f49-7c6d12eb3fc7",
         "93ce0248-7a71-40d6-8b40-be55cf985821",
         "312b80d6-a009-4771-817f-4b0deca0387e",
         "44a61a9a-fd8d-4706-9ea5-65e51bded05d",
@@ -558,6 +592,7 @@
         "2ca63b41-5e38-49b0-8f78-0a9e0380f151",
         "0951cc0e-fe62-4d71-8f67-104e41c21f12",
         "2d84584b-070b-4b6b-bae5-4b7dda907eb8",
+        "280f3d6c-11cb-4fbf-9f7c-a080d007c0c0",
         "247c1cf6-2b0f-46a6-b683-2182bc056b8d",
         "3f85c615-3dd5-47fe-b42f-bc1ecb18e112",
         "ece5b465-4521-4638-82e1-5b3414b0c598",

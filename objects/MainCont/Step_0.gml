@@ -11,14 +11,20 @@ if(mouse_check_button_pressed(mb_left) && !hovering_over_node() && !hovering_ove
 	{
 		x -= round(width*0.1);
 		y -= round(height*0.1);
+		node_open_bubble(id);
 	}
 }
 
-// Right-clicking removes node bubble and stops linking
+// De-select
 if(mouse_check_button_pressed(mb_right))
 {
+	// Stop linking
 	global.link = noone;
-	with(NodeBubble) instance_destroy();
+	// De-select bubble
+	if(instance_exists(NodeBubble))
+		with(NodeBubble) instance_destroy();
+	// De-select node
+	else global.last_interacted = noone;
 }
 
 // Node step

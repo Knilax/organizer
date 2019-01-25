@@ -31,7 +31,11 @@ for(var i = 0; i < array_length_1d(_arr); i++)
 		var _split_arr = string_split(_val_arr[j], ":");
 		var _var_name = _split_arr[0];
 		var _var_value = _split_arr[1];
-		if(string(real(_var_value)) == _var_value) _var_value = real(_var_value);
+		// Convert to array if applicable
+		if(string_count(",", _var_value) >= 1)
+			_var_value = array("["+_var_value+"]");
+		// Convert to real if applicable
+		else if(string(real(_var_value)) == _var_value) _var_value = real(_var_value);
 		// Set variable depending on object name / variable type
 		switch(_name)
 		{
@@ -54,3 +58,6 @@ for(var i = 0; i < array_length_1d(_arr); i++)
 	// Destroy map
 	ds_map_destroy(_arr[i]);
 }
+
+// Fix Node width and height
+with(Node) node_set_text(id, body, header);
