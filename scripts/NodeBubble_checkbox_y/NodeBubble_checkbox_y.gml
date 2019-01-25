@@ -5,8 +5,8 @@
 
 var _index = argument[0];
 
-var _map = checkboxes[|_index];
+var _map = checkboxes[|0];
 var _desc = _map[?"desc"];
 
 draw_set_font(fntBody);
-return y + margin_v + _index*(string_height(_map[?"desc"]) + margin_v*0.5);
+return y + margin_v + _index*(string_height("l") + margin_v*0.5);

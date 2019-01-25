@@ -28,6 +28,7 @@ with(Node)
 	_str += "x:\""		+ string(x)			+ "\",";
 	_str += "y:\""		+ string(y)			+ "\",";
 	_str += "index:\""	+ string(index)		+ "\",";
+	_str += "color:\""	+ string(color)		+ "\",";
 	_str += "header:\""	+ string(header)	+ "\",";
 	_str += "body:\""	+ string(_body)		+ "\",";
 	_str += "linked:"	+ _links;

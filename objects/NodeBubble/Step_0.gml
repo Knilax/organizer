@@ -5,11 +5,13 @@ y = lerp(y, nodebubble_desired_y(id), 0.1);
 arrow_x = lerp(arrow_x, creator.x + creator.width/2, 0.15);
 arrow_x = clamp(arrow_x, x+arrow_size, x+width-arrow_size);
 
+// Options
+var _row = 0;
 // Checkboxes
 for(var i = 0; i < ds_list_size(checkboxes); i++)
 {
 	var _x = x + margin_h;
-	var _y = NodeBubble_checkbox_y(i);
+	var _y = NodeBubble_checkbox_y(_row++);
 	var _s = NodeBubble_checkbox_size();
 	if(mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x, mouse_y, _x, _y, _x+_s, _y+_s))
 	{
@@ -18,6 +20,15 @@ for(var i = 0; i < ds_list_size(checkboxes); i++)
 		if(_map[?"enabled"] != -1)
 			_map[?"enabled"] = !_map[?"enabled"];
 	}
+}
+// Colors
+for(var i = 0; i < ds_list_size(colors); i++)
+{
+	var _x = x + margin_h*(i+1) + _s*i;
+	var _y = NodeBubble_checkbox_y(_row);
+	var _s = NodeBubble_checkbox_size();
+	if(mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x, mouse_y, _x, _y, _x+_s, _y+_s))
+		with(creator) color = other.colors[|i];
 }
 
 // Holding backspace

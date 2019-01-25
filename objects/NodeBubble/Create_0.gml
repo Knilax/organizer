@@ -6,8 +6,8 @@ creator = noone;
 alarm[2] = 1;
 
 // Size
-height = 75;
-width = 160;
+height = 85;
+width = 172;
 arrow_size = width*0.075;
 
 // Positions
@@ -21,6 +21,7 @@ backspace_delete_alarm = BACKSPACE_DELETE_ALARM;
 
 // Options
 checkboxes = ds_list_create();
+colors = ds_list_create();
 alarm[1] = 1;
 
 // Clear keyboard string

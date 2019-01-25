@@ -10,6 +10,9 @@ node_id = global._node_id++;
 width = 125;
 height = 60;
 
+// Color
+color = c_white;
+
 // Reposition
 locked = false;
 grabbed = false;

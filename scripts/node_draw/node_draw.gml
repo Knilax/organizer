@@ -30,7 +30,7 @@ with(argument[0])
 	}
 	
 	// Base
-	draw_set_color(c_white);
+	draw_set_color(color);
 	draw_rectangle(x, y, x+_width, y+_height, false);
 	
 	// Shadow
