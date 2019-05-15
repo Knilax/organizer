@@ -6,7 +6,7 @@ creator = noone;
 alarm[2] = 1;
 
 // Size
-height = 85;
+height = 58;
 width = 172;
 arrow_size = width*0.075;
 

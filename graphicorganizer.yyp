@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "47cd5c3e-197c-43fc-8bef-8af59712ebef",
+            "Value": {
+                "id": "e0cbc1ef-9231-4745-a2ab-97006c31f1e0",
+                "resourcePath": "sprites\\sprIcon\\sprIcon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4a6d3952-d418-4dee-8f43-3464254d986d",
             "Value": {
                 "id": "d20d4bbd-4e77-40f3-ab28-fac102fddd8a",
@@ -303,11 +311,11 @@
             }
         },
         {
-            "Key": "51faeea9-b04e-46a0-b535-bddbda2b0a0c",
+            "Key": "54679db3-7d3b-4885-8d02-20a3553842ee",
             "Value": {
-                "id": "e801d5ec-1568-40d2-8e23-3ccdfdf9d408",
-                "resourcePath": "objects\\Tutorial\\Tutorial.yy",
-                "resourceType": "GMObject"
+                "id": "d7a7cf35-df73-4074-9cf7-d13cc1f59fd2",
+                "resourcePath": "views\\54679db3-7d3b-4885-8d02-20a3553842ee.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -332,6 +340,14 @@
                 "id": "4b9c79f4-ba1b-4cd3-8c90-8c5a3c4e7a02",
                 "resourcePath": "views\\62a1f04c-7de2-44f5-ac23-ff8ac4be56af.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "64cf902c-e62a-41db-9153-3f05899bee9d",
+            "Value": {
+                "id": "ad3592a0-57b7-4c2a-bcd0-ae03a90a3aad",
+                "resourcePath": "scripts\\organizer_new\\organizer_new.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -396,6 +412,14 @@
                 "id": "6f0b57c3-1326-411b-8d8a-10213535be30",
                 "resourcePath": "views\\8d7d9dbd-e740-4d1b-a2bf-88d79f49342f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "913f0dfd-f919-410f-80f2-909ec5263d32",
+            "Value": {
+                "id": "4a189dd0-2885-42ca-9857-d1408cea82a8",
+                "resourcePath": "objects\\Icon\\Icon.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -629,6 +653,14 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "f5732dee-fc52-4e4d-8b11-edd709d90e85",
+            "Value": {
+                "id": "3e393260-86ec-4d74-940e-7e8cf94bafe5",
+                "resourcePath": "objects\\IconCont\\IconCont.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [
@@ -645,8 +677,6 @@
         "e5e71256-b71d-4990-ba33-4d88e9bd0180",
         "a3a0cd54-c061-48be-acd9-dd40d028edf5",
         "b8be25cf-704c-4c89-9f49-7c6d12eb3fc7",
-        "391e62df-4e89-4d09-9c06-8eb28146f2c7",
-        "98a1351a-08b8-47d5-a423-7754dc00e58f",
         "312b80d6-a009-4771-817f-4b0deca0387e",
         "44a61a9a-fd8d-4706-9ea5-65e51bded05d",
         "1e805c12-bbce-491c-96a4-e6fe52a385e4",
@@ -665,7 +695,10 @@
         "3f85c615-3dd5-47fe-b42f-bc1ecb18e112",
         "ece5b465-4521-4638-82e1-5b3414b0c598",
         "cb7379b2-cb98-4f1f-9001-e3beb025d279",
-        "28c4762c-1344-4103-8937-e56a2a5bcb43"
+        "28c4762c-1344-4103-8937-e56a2a5bcb43",
+        "391e62df-4e89-4d09-9c06-8eb28146f2c7",
+        "98a1351a-08b8-47d5-a423-7754dc00e58f",
+        "64cf902c-e62a-41db-9153-3f05899bee9d"
     ],
     "tutorial": ""
 }

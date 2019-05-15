@@ -1,10 +1,6 @@
 
-// Cursor
-if(hovering_over_node()) window_set_cursor(cr_handpoint);
-else if(!cursor_in_window()) window_set_cursor(cr_default);
-
 // Create nodes
-if(mouse_check_button_pressed(mb_left) && !hovering_over_node() && !hovering_over_nodebubble())
+if(!global.hovering_icon && mouse_check_button_pressed(mb_left) && !hovering_over_node() && !hovering_over_nodebubble())
 {
 	with(NodeBubble) instance_destroy();
 	with(instance_create(mouse_x, mouse_y, Node))
@@ -75,7 +71,7 @@ else if(panning)
 var _up = mouse_wheel_up();
 var _down = mouse_wheel_down();
 if(_up ^^ _down)
-	global.cam_zoom = clamp(global.cam_zoom + 0.1*(_down - _up), 0.25, 1.75);
+	global.cam_zoom = clamp(global.cam_zoom + 0.1*(_down - _up), 0.5, 1.75);
 
 // Fix size of camera
 var _w = window_get_width()*global.cam_zoom;

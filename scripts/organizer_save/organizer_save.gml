@@ -1,5 +1,5 @@
 
-/// @desc Saves everything to file
+/// @desc Saves everything to file, returns if successful
 
 var _str = "";
 
@@ -31,12 +31,14 @@ with(Node)
 	ds_map_add(_map, "header", header);
 	ds_map_add(_map, "body", _body);
 	ds_map_add(_map, "linked", linked);
+	ds_map_add(_map, "locked", locked);
 	_str += base64_encode(json_encode(_map))+"\n";
 	ds_map_destroy(_map);
 }
 
 // Get directory of file
 var _dir = get_save_filename("*.organizer", "");
+if(_dir == "") return false;
 if(string_count(".", _dir) == 0) _dir += ".organizer";
 
 // Open file
@@ -47,3 +49,6 @@ file_text_write_line_ns(_file, _str);
 
 // Close file
 file_text_close_ns(_file);
+
+// Success
+return true;

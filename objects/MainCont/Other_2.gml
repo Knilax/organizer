@@ -1,10 +1,11 @@
 
 // Macros
 
-#macro DEP_BUBBLE -5
+#macro DEP_ICONS -4
+#macro DEP_BUBBLE -2
 #macro DEP_NORMAL 0
-#macro DEP_TUTORIAL 5
-#macro DEP_BACKGROUND 10
+#macro DEP_TUTORIAL 2
+#macro DEP_BACKGROUND 4
 
 #macro cam view_camera[0]
 #macro cam_x camera_get_view_x(cam)

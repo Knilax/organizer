@@ -1,5 +1,5 @@
 
-/// @desc Load everything
+/// @desc Load everything, returns if successful
 
 // Delete existing nodes
 
@@ -37,6 +37,8 @@ with(Node) instance_destroy();
 for(var i = 0; i < array_length_1d(_arr)-1 /* -1 b/c the do loop adds a blank at the end */; i++)
 {
 	var _map = json_decode(_arr[i]);
+	if(!ds_exists(_map, ds_type_map)) return false;
+	if(!ds_map_exists(_map, "obj")) return false;
 	//Get instance of object to modify/add
 	var _inst = asset_get_index(_map[?"obj"]);
 	if(_map[?"create_new"]) _inst = instance_create(0, 0, _inst);
@@ -66,3 +68,7 @@ for(var i = 0; i < array_length_1d(_arr)-1 /* -1 b/c the do loop adds a blank at
 // Reset size of Nodes
 
 with(Node) node_set_text(id, body, header);
+
+// Success
+
+return true;

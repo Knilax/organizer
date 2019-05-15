@@ -13,12 +13,16 @@ for(var i = 0; i < ds_list_size(checkboxes); i++)
 	var _x = x + margin_h;
 	var _y = NodeBubble_checkbox_y(_row++);
 	var _s = NodeBubble_checkbox_size();
-	if(mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x, mouse_y, _x, _y, _x+_s, _y+_s))
+	if(point_in_rectangle(mouse_x, mouse_y, _x, _y, _x+_s, _y+_s))
 	{
-		var _map = checkboxes[|i];
-		script_execute(_map[?"on_click"], i);
-		if(_map[?"enabled"] != -1)
-			_map[?"enabled"] = !_map[?"enabled"];
+		global.hovering_clickable = true;
+		if(mouse_check_button_pressed(mb_left))
+		{
+			var _map = checkboxes[|i];
+			script_execute(_map[?"on_click"], i);
+			if(_map[?"enabled"] != -1)
+				_map[?"enabled"] = !_map[?"enabled"];
+		}
 	}
 }
 // Colors
@@ -27,8 +31,12 @@ for(var i = 0; i < ds_list_size(colors); i++)
 	var _x = x + margin_h*(i+1) + _s*i;
 	var _y = NodeBubble_checkbox_y(_row);
 	var _s = NodeBubble_checkbox_size();
-	if(mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x, mouse_y, _x, _y, _x+_s, _y+_s))
-		with(creator) color = other.colors[|i];
+	if(point_in_rectangle(mouse_x, mouse_y, _x, _y, _x+_s, _y+_s))
+	{
+		global.hovering_clickable = true;
+		if(mouse_check_button_pressed(mb_left))
+			with(creator) color = other.colors[|i];
+	}
 }
 
 // Holding backspace

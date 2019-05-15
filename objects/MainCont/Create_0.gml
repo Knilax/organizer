@@ -23,6 +23,9 @@ global.last_interacted = noone;
 global._node_id = 0;
 global.link = noone;
 
+// Hovering over NodeBubble clickable
+global.hovering_clickable = false;
+
 // Workspace panning
 panning = false;
 pan_start_x = 0;
