@@ -68,10 +68,17 @@ else if(panning)
 }
 
 // Zoom camera
+/*
+
+TODO:
+MAKE ZOOM CHOSEN (choose 100% zoom, 50% zoom, etc NOT scroll wheel)
+Magnifying glass icon?
+
 var _up = mouse_wheel_up();
 var _down = mouse_wheel_down();
 if(_up ^^ _down)
 	global.cam_zoom = clamp(global.cam_zoom + 0.1*(_down - _up), 0.5, 1.75);
+*/
 
 // Fix size of camera
 var _w = window_get_width()*global.cam_zoom;
