@@ -1,2 +1,2 @@
 
-//show_debug_message(linked);
+show_debug_message(linked);

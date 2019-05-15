@@ -1,8 +1,8 @@
 {
-    "id": "0951cc0e-fe62-4d71-8f67-104e41c21f12",
+    "id": "391e62df-4e89-4d09-9c06-8eb28146f2c7",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "load_get_variables",
+    "name": "organizer_save",
     "IsCompatibility": false,
     "IsDnD": false
 }
