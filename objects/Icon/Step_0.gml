@@ -30,4 +30,20 @@ if(hover && mouse_check_button_pressed(mb_left))
 		case 2:
 			organizer_load();
 			break;
+		// Zoom
+		case 3:
+			var _zooms = [0.5, 0.75, 1, 1.25, 1.5];
+			for(var i = 0; i < array_length_1d(_zooms); i++)
+				if(_zooms[i] == global.cam_zoom)
+				{
+					var _pos = i+1;
+					if(_pos > array_length_1d(_zooms)-1) _pos = 0;
+					global.cam_zoom = _zooms[_pos];
+					break;
+				}
+			break;
+		// Help
+		case 4:
+			url_open("http://bfy.tw/3nV");
+			break;
 	}

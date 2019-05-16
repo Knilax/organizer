@@ -14,7 +14,7 @@ for(var i = 0; i < array_length_1d(_arr); i++)
 			if(instance_exists(_inst))
 			{
 				_new_arr[_pos++] = linked[j];
-				var _s = 8;
+				var _s = 6.5;
 				var _x0 = x + width/2;
 				var _y0 = y + height/2;
 				var _x1 = _inst.x + _inst.width/2;
@@ -31,4 +31,4 @@ for(var i = 0; i < array_length_1d(_arr); i++)
 
 // Draw link to mouse
 with(global.link)
-	draw_line_width(x + width/2, y + height/2, mouse_x, mouse_y, 8);
+	draw_line_width(x + width/2, y + height/2, mouse_x, mouse_y, 6.5);

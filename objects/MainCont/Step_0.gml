@@ -7,7 +7,6 @@ if(!global.hovering_icon && mouse_check_button_pressed(mb_left) && !hovering_ove
 	{
 		x -= round(width*0.1);
 		y -= round(height*0.1);
-		node_open_bubble(id);
 	}
 }
 
@@ -81,12 +80,9 @@ if(_up ^^ _down)
 */
 
 // Fix size of camera
-var _w = window_get_width()*global.cam_zoom;
-var _h = window_get_height()*global.cam_zoom;
+var _w = lerp(cam_w, window_get_width()*global.cam_zoom, 0.1);
+var _h = lerp(cam_h, window_get_height()*global.cam_zoom, 0.1);
 camera_set_view_size(cam, _w, _h);
 
 // Position camera
 camera_set_view_pos(cam, global._cam_x - cam_w/2, global._cam_y - cam_h/2);
-
-// Resize surface
-surface_resize(application_surface, _w, _h);

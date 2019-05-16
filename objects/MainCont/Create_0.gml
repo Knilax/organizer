@@ -30,3 +30,6 @@ global.hovering_clickable = false;
 panning = false;
 pan_start_x = 0;
 pan_start_y = 0;
+
+// New organizer
+organizer_new();

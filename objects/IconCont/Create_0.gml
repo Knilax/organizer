@@ -6,7 +6,7 @@ global.hovering_icon = false;
 var _icon_size = 32;
 var _margin = _icon_size / 4;
 
-for(var i = 0; i < 3; i++)
+for(var i = 0; i < sprite_get_number(sprIcon); i++)
 {
 	with(instance_create(0, 0, Icon))
 	{

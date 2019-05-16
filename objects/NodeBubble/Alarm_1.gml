@@ -2,7 +2,7 @@
 /// @desc Add options
 
 NodeBubble_add_checkbox("Locked", NodeBubble_checkbox_on_click_locked, creator.locked);
-//NodeBubble_add_checkbox("Clear links", NodeBubble_checkbox_on_click_clear_links, -1);
+NodeBubble_add_checkbox("Clear links", NodeBubble_checkbox_on_click_clear_links, -1);
 
 ds_list_add(colors, c_white); //white
 ds_list_add(colors, make_color_rgb(207, 216, 220)); //gray
