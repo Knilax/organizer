@@ -8,7 +8,8 @@
         "3f85c615-3dd5-47fe-b42f-bc1ecb18e112",
         "ece5b465-4521-4638-82e1-5b3414b0c598",
         "cb7379b2-cb98-4f1f-9001-e3beb025d279",
-        "28c4762c-1344-4103-8937-e56a2a5bcb43"
+        "28c4762c-1344-4103-8937-e56a2a5bcb43",
+        "12e40b21-c00e-4cc2-b54e-9bd5fc0d3687"
     ],
     "filterType": "GMScript",
     "folderName": "NodeBubble",

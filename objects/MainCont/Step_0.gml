@@ -35,7 +35,9 @@ if(!instance_exists(NodeBubble))
 	var _down = keyboard_check_pressed(vk_down);
 	if(_up ^^ _down)
 		with(global.last_interacted)
+		{
 			index = clamp(index + _up - _down, node_lowest_index()-1, node_highest_index()+1);
+		}
 }
 
 // Delete node
@@ -65,19 +67,6 @@ else if(panning)
 		pan_start_y = gui_mouse_y;
 	}
 }
-
-// Zoom camera
-/*
-
-TODO:
-MAKE ZOOM CHOSEN (choose 100% zoom, 50% zoom, etc NOT scroll wheel)
-Magnifying glass icon?
-
-var _up = mouse_wheel_up();
-var _down = mouse_wheel_down();
-if(_up ^^ _down)
-	global.cam_zoom = clamp(global.cam_zoom + 0.1*(_down - _up), 0.5, 1.75);
-*/
 
 // Fix size of camera
 var _w = lerp(cam_w, window_get_width()*global.cam_zoom, 0.1);

@@ -4,7 +4,7 @@
 
 with(argument[0])
 {
-
+	
 	// Interactions
 	if(!global.node_interacted)
 	{
@@ -30,6 +30,10 @@ with(argument[0])
 					global.link = noone;
 				}
 				
+				// Destroy NodeBubble on selecting different Node
+				if(id != global.last_interacted) with(NodeBubble) instance_destroy();
+				
+				// Node stuff
 				double_click_time = DOUBLE_CLICK_TIME;
 				global.node_interacted = true;
 				global.last_interacted = id;

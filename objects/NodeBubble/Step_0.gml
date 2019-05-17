@@ -1,4 +1,7 @@
 
+// Alpha
+image_alpha = lerp(image_alpha, 1, 0.3);
+
 // Lerp to desired position
 x = lerp(x, nodebubble_desired_x(id), 0.1);
 y = lerp(y, nodebubble_desired_y(id), 0.1);
@@ -10,20 +13,25 @@ var _row = 0;
 // Checkboxes
 for(var i = 0; i < ds_list_size(checkboxes); i++)
 {
-	var _x = x + margin_h;
 	var _y = NodeBubble_checkbox_y(_row++);
 	var _s = NodeBubble_checkbox_size();
-	if(point_in_rectangle(mouse_x, mouse_y, _x, _y, _x+_s, _y+_s))
+	var _map = checkboxes[|i];
+	var _hover = point_in_rectangle(mouse_x, mouse_y, x+margin_h, _y, x+width-margin_h, _y+_s);
+	if(_hover)
 	{
 		global.hovering_clickable = true;
 		if(mouse_check_button_pressed(mb_left))
 		{
-			var _map = checkboxes[|i];
 			script_execute(_map[?"on_click"], i);
 			if(_map[?"enabled"] != -1)
 				_map[?"enabled"] = !_map[?"enabled"];
 		}
 	}
+	
+	// Hover if not togglable
+	var _togglable = (_map[?"enabled"] != -1);
+	if(_togglable) _map[?"colorperc"] = lerp(_map[?"colorperc"], _map[?"enabled"], 0.2);
+	else _map[?"colorperc"] = lerp(_map[?"colorperc"], ((_hover) ? 1 : 0), 0.2);
 }
 // Colors
 for(var i = 0; i < ds_list_size(colors); i++)
