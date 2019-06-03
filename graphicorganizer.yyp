@@ -103,14 +103,6 @@
             }
         },
         {
-            "Key": "18af8fe1-266a-4f08-b949-e51ae59e4e61",
-            "Value": {
-                "id": "35c2c1a9-4b09-4b93-bfe5-e3055c6fdf23",
-                "resourcePath": "sprites\\sprBackground\\sprBackground.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "1cd26adc-352b-4fa8-9b7c-d263e6dd6ca8",
             "Value": {
                 "id": "866e49c7-7513-4938-a34d-2d0489c4f121",
@@ -412,6 +404,14 @@
                 "id": "bb4411cf-1342-4ffe-b525-9f6973eaf7d7",
                 "resourcePath": "scripts\\invert_color\\invert_color.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "85489748-105c-4198-9d1f-573955d03d3d",
+            "Value": {
+                "id": "6497fe99-8dcc-4e96-8304-1f997cf31545",
+                "resourcePath": "notes\\todo.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
